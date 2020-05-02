@@ -1,0 +1,47 @@
+<mvc:View controllerName="com.infy.PWAOfflineBackend.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<VBox>
+							<Text id="__text"></Text>
+							<Input id="__input0" value="{/name}" placeholder="Name"/>
+							<Input id="__input1" value="{/description}" placeholder="Description"/>
+							<Input id="__input2" value="{/price}" placeholder="Price" type="Number"/>
+							<Input id="__input3" value="{/rating}" placeholder="Rating" type="Number"/>
+							<HBox>
+								<Button text="Save" id="__button0" press="handleSave"/>
+								<Button text ="Read" id="__button1" press="handleRead"/>
+								<Button text ="Clear" id="__button2" press="handleClear"/>
+							</HBox>
+						</VBox>
+						<Table id="lineItemsList" width="auto" items="{path: 'ProductsModel>/', sorter: { path: 'ProductsModel>Name', descending: false }}" updateFinished="onListUpdateFinished" class="sapUiResponsiveMargin">
+						<headerToolbar>
+							<Toolbar id="lineItemsToolbar">
+								<Title id="lineItemsHeader" text="{detailView>/lineItemListTitle}"/>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column>
+								<Text text="{i18n>detailLineItemTableIDColumn}"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" hAlign="End">
+								<Text text="{i18n>detailLineItemTableUnitNumberColumn}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{ProductsModel>Name}" />
+									<ObjectNumber number="{ProductsModel>ID}" />
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

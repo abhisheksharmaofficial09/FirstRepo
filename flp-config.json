@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "com.infy.PWAOfflineBackend.PWAOfflineBackend",
+        "description": "Demo Application to show offline PWA app",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#PWAOfflineBackend-Display",
+        "navigationComponentName": "com.infy.PWAOfflineBackend",
+        "intentSemanticObject": "PWAOfflineBackend",
+        "intentAction": "Display",
+        "html5ApplicationName": "pwaofflinebackend",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "06bf636d-fd86-4c5e-94ec-88be03c1b3a6"
+        ],
+        "contentPackages": [
+            "78419999-edd1-4e0c-8b67-ae79113dc031"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Offline PWA",
+        "subtitle": "Demo App",
+        "searchKeywords": "Offline PWA,Demo App",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
